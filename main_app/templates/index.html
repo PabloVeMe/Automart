@@ -1,0 +1,29 @@
+{%load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoMart</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}" />
+</head>
+<body>
+   
+    <h1>AutoMart</h1>
+    {% for auto in autos %}
+     <p>{{ auto.nombre }}</p>
+     <p>{{ auto.color }}</p>
+     
+        {% if auto.precio>0}
+         <p>{{auto.precio}}</p>
+         {% else}
+      <p>{{auto.precio}}</p>
+        {%endif}
+
+
+     <p>{{ auto.precio }}</p>
+     <p>{{ auto.modelo }}</p>
+
+     <hr />
+    {% endfor %}
+
+</body>
+</html>
